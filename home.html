@@ -9,19 +9,8 @@
   </head>
 
   <body class="main-page">
-    <!-- ✅ 네비 -->
-    <header class="topbar">
-      <div class="logo">STUDEO</div>
-
-      <nav>
-        <a href="#">학습</a>
-        <a href="#">퀴즈</a>
-        <a href="#">팀 소개</a>
-      </nav>
-    </header>
-
     <!-- ✅ HERO -->
-    <section class="hero">
+    <section class="hero page">
       <div class="hero-content">
         <h1>정보 보호학 전공 학생들을 위한 학습 플랫폼</h1>
         <p>나에게 맞는 학습을 탐색하고 성장하세요</p>
@@ -30,21 +19,48 @@
       </div>
     </section>
 
-    <!-- ✅ 빠른 메뉴 -->
-    <section class="quick-menu">
-      <a href="./src/pages/learn.html" class="quick-card">
-        <h2>학습</h2>
-        <p>리소스 탐색</p>
-      </a>
+    <!-- ✅ 학습 -->
+    <section class="section page">
+      <h2>학습</h2>
 
-      <a href="./src/pages/quiz/quizzes.html" class="quick-card">
-        <h2>퀴즈</h2>
-        <p>문제 풀이</p>
-      </a>
+      <div class="card-list">
+        <div class="card">
+          <h3>네트워크</h3>
+          <p>기초부터</p>
+        </div>
+        <div class="card">
+          <h3>보안</h3>
+          <p>개념 학습</p>
+        </div>
+        <div class="card">
+          <h3>웹 해킹</h3>
+          <p>실습 중심</p>
+        </div>
+      </div>
     </section>
 
-    <!-- ✅ 콘텐츠 -->
-    <section class="content">
+    <!-- ✅ 퀴즈 -->
+    <section class="section page">
+      <h2>퀴즈</h2>
+
+      <div class="card-list">
+        <div class="card">
+          <h3>기초 문제</h3>
+          <p>초보용</p>
+        </div>
+        <div class="card">
+          <h3>실전 문제</h3>
+          <p>중급</p>
+        </div>
+        <div class="card">
+          <h3>CTF</h3>
+          <p>고급</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✅ 추천 (그대로 유지) -->
+    <section class="content page">
       <h2>추천 학습</h2>
 
       <div class="card-list">
@@ -67,5 +83,10 @@
         </div>
       </div>
     </section>
+
+    <!-- ✅ TOP 버튼 -->
+    <button id="topBtn">↑</button>
+
+    <script src="./home.js"></script>
   </body>
 </html>

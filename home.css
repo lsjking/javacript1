@@ -1,160 +1,106 @@
-/* ✅ 기본 */
 body.main-page {
   margin: 0;
-  font-family: 'Pretendard', sans-serif;
-  background: #f9fafb;
-  color: #111;
+  font-family: sans-serif;
+
+  background: linear-gradient(135deg, #6c63ff, #8b5cf6);
+  color: white;
+
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
 }
 
-/* ✅ 네비 */
-.topbar {
-  height: 60px;
+/* ✅ 공통 페이지 */
+.page {
+  height: 100vh;
+
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 
-  padding: 0 40px;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-  color: #6c63ff;
-}
-
-.topbar nav a {
-  margin-left: 20px;
-  color: #333;
-  text-decoration: none;
-  opacity: 0.7;
-  transition: 0.2s;
-}
-
-.topbar nav a:hover {
-  opacity: 1;
-  color: #6c63ff;
+  scroll-snap-align: start;
 }
 
 /* ✅ HERO */
 .hero {
-  height: 320px;
-  display: flex;
-  align-items: center;
-  padding-left: 80px;
-
-  color: #fff;
-  background: linear-gradient(135deg, #6c63ff, #8b5cf6);
-}
-
-.hero-content h1 {
-  margin: 0;
-  font-size: 42px;
-}
-
-.hero-content p {
-  margin-top: 10px;
-  opacity: 0.9;
+  text-align: center;
 }
 
 .hero-btn {
-  display: inline-block;
   margin-top: 20px;
-
-  padding: 12px 22px;
-  border-radius: 12px;
-
-  background: #fff;
+  padding: 12px 20px;
+  background: white;
   color: #6c63ff;
-  font-weight: bold;
+  border-radius: 10px;
   text-decoration: none;
-
-  transition: 0.2s;
 }
 
-.hero-btn:hover {
-  background: #eee;
-}
-
-/* ✅ 빠른 메뉴 */
-.quick-menu {
-  display: flex;
-  gap: 20px;
-
-  padding: 30px 80px; /* ✅ 줄임 */
-  margin-bottom: 8px; /* ✅ 최소 간격 */
-}
-
-.quick-card {
-  flex: 1;
-  padding: 20px;
-
-  border-radius: 20px;
-  background: #fff;
-
-  color: #111;
-  text-decoration: none;
-
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: 0.25s;
-}
-
-.quick-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(108, 99, 255, 0.2);
-}
-
-/* ✅ 콘텐츠 */
-.content {
-  padding: 0 80px 80px;
-}
-
+/* ✅ 섹션 */
+.section h2,
 .content h2 {
-  margin: 0 0 16px; /* ✅ 불필요 margin 제거 */
-  color: #222;
+  margin-bottom: 20px;
 }
 
-/* ✅ 카드 리스트 */
+/* ✅ 카드 */
 .card-list {
   display: flex;
   gap: 20px;
 }
 
-/* ✅ 카드 */
 .card {
   width: 220px;
-  padding: 16px;
-
-  background: #fff;
+  padding: 20px;
   border-radius: 16px;
 
-  cursor: pointer;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
-  transition: 0.25s;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(40px);
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 40px rgba(108, 99, 255, 0.25);
-}
-
-/* ✅ 썸네일 */
+/* ✅ 추천 썸네일 유지 */
 .thumb {
   height: 120px;
-  margin-bottom: 10px;
   border-radius: 10px;
+  margin-bottom: 10px;
 
   background: linear-gradient(135deg, #6c63ff, #a78bfa);
 }
 
-/* ✅ 텍스트 */
-.card h3 {
-  margin: 8px 0 4px;
-  font-size: 18px;
+/* ✅ 등장 */
+.show h2,
+.show p {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.6s;
 }
 
-.card p {
-  font-size: 14px;
-  color: #666;
+.show .card {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.6s;
+  transition-delay: 0.3s;
+}
+
+/* ✅ TOP 버튼 */
+#topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+  width: 50px;
+  height: 50px;
+
+  border: none;
+  border-radius: 50%;
+
+  background: white;
+  color: #6c63ff;
+  font-size: 20px;
+
+  cursor: pointer;
+  display: none;
 }
