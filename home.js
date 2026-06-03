@@ -12,19 +12,15 @@ const observer = new IntersectionObserver(
   { threshold: 0.6 },
 )
 
-sections.forEach((section) => observer.observe(section))
+sections.forEach((el) => observer.observe(el))
 
-// ✅ TOP 버튼
-const topBtn = document.getElementById('topBtn')
+// ✅ 위로 버튼
+const btn = document.getElementById('topBtn')
 
 window.addEventListener('scroll', () => {
-  if (window.scrollY > 300) {
-    topBtn.style.display = 'block'
-  } else {
-    topBtn.style.display = 'none'
-  }
+  btn.style.display = window.scrollY > 300 ? 'block' : 'none'
 })
 
-topBtn.addEventListener('click', () => {
+btn.onclick = () => {
   window.scrollTo({ top: 0, behavior: 'smooth' })
-})
+}
