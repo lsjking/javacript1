@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>오답노트 페이지</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <h1>📘 오답노트 페이지</h1>
+
+    <div class="container">
+      <!-- TIP -->
+      <div class="section">
+        <button onclick="toggleTip()">⏱ 작성 TIP 보기</button>
+        <div class="tip" id="tipBox">
+          ✅ 핵심만 작성<br />
+          ✅ 틀린 이유 1줄 요약<br />
+          ✅ 유형별 복습<br />
+          ✅ 맞으면 삭제<br />
+        </div>
+      </div>
+
+      <!-- 입력 -->
+      <div class="section">
+        <h3>✏️ 오답 입력</h3>
+
+        <label>문제</label>
+        <textarea id="question"></textarea>//입력칸 만들기
+
+        <label>정답</label>
+        <input type="text" id="correct" />
+
+        <label>내 답</label>
+        <input type="text" id="myAnswer" />
+
+        <label>유형</label>
+        <select id="type">
+          <option>① 개념 부족</option>
+          <option>② 실수</option>
+          <option>③ 시간 부족</option>
+          <option>④ 응용</option>
+          <option>⑤ 고난도</option>
+        </select>
+
+        <label>분석</label>
+        <textarea id="analysis"></textarea>
+
+        <button onclick="addNote()">➕ 추가</button>//버튼만들기
+      </div>
+
+      <!-- 결과 -->
+      <div class="section">
+        <h3>📂 오답 리스트</h3>
+        <div id="list"></div>
+        //결과 출력 영역
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

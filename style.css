@@ -1,0 +1,46 @@
+body {
+  font-family: Arial;
+  background: #f5f7fa;
+  padding: 20px;
+}
+
+.container {
+  /* max-width: 1000px; */
+  margin: auto;
+}
+
+.section {
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.flex {
+  display: flex;
+  gap: 20px;
+}
+
+textarea,
+input,
+select {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button {
+  background: #4caf50;
+  color: white;
+  padding: 10px;
+}
+
+.tip {
+  display: none;
+  background: #fff3cd;
+  padding: 10px;
+}
+
+.note {
+  border-top: 1px solid gray;
+  margin-top: 10px;
+}
